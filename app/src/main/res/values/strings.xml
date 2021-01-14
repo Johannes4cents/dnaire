@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">dnaire</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="agora_app_id">6328d489da2b4d63ac154c7136ff737c</string>
+    <string name="agora_access_token">0066328d489da2b4d63ac154c7136ff737cIAAZH52x2oWjqruKN8pQDP8mGDAo/n+3rH1dJuQjcDh2aBO0h58AAAAAEACpE93IOFH+XwEAAQA5Uf5f</string>
+
+</resources>

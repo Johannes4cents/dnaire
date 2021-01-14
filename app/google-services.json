@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "252770759220",
+    "project_id": "dnaire",
+    "storage_bucket": "dnaire.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:252770759220:android:b101a2bcf4126e8bfb1061",
+        "android_client_info": {
+          "package_name": "com.example.dnaire"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "252770759220-ulhpkaj6458ebnnb7qh1mngpmfjsup03.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDiVsu5BPoJQXwhweMZh65mPz4rWxIgKF4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "252770759220-ulhpkaj6458ebnnb7qh1mngpmfjsup03.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

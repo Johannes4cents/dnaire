@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/startFragment">
+    <fragment
+        android:id="@+id/startFragment"
+        android:name="com.example.dnaire.fragments.StartFragment"
+        android:label="StartFragment" >
+        <action
+            android:id="@+id/action_startFragment_to_signUpFragment"
+            app:destination="@id/signUpFragment" />
+        <action
+            android:id="@+id/action_startFragment_to_lobbyFragment"
+            app:destination="@id/lobbyFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/signUpFragment"
+        android:name="com.example.dnaire.fragments.SignUpFragment"
+        android:label="SignUpFragment" >
+        <action
+            android:id="@+id/action_signUpFragment_to_lobbyFragment"
+            app:destination="@id/lobbyFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/lobbyFragment"
+        android:name="com.example.dnaire.fragments.LobbyFragment"
+        android:label="LobbyFragment" >
+        <action
+            android:id="@+id/action_lobbyFragment_to_bestOfFragment"
+            app:destination="@id/bestOfFragment" />
+        <action
+            android:id="@+id/action_lobbyFragment_to_friendsFragment"
+            app:destination="@id/friendsFragment" />
+        <action
+            android:id="@+id/action_lobbyFragment_to_mutamagotchiFragment"
+            app:destination="@id/mutamagotchiFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/bestOfFragment"
+        android:name="com.example.dnaire.fragments.BestOfFragment"
+        android:label="BestOfFragment" >
+        <action
+            android:id="@+id/action_bestOfFragment_to_lobbyFragment"
+            app:destination="@id/lobbyFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/friendsFragment"
+        android:name="com.example.dnaire.fragments.FriendsFragment"
+        android:label="FriendsFragment" >
+        <action
+            android:id="@+id/action_friendsFragment_to_lobbyFragment"
+            app:destination="@id/lobbyFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/mutamagotchiFragment"
+        android:name="com.example.dnaire.fragments.MutamagotchiFragment"
+        android:label="MutamagotchiFragment" >
+        <action
+            android:id="@+id/action_mutamagotchiFragment_to_lobbyFragment"
+            app:destination="@id/lobbyFragment" />
+    </fragment>
+</navigation>

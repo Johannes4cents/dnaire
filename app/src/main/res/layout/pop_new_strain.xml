@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:background="#FFFFFFFF"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/strainImage"
+            android:layout_width="130dp"
+            android:layout_height="55dp"
+            android:layout_marginStart="20dp"
+            android:src="@drawable/strain"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/backButton"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <EditText
+            android:id="@+id/strainInput"
+            style="@style/dnaireText"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:gravity="center"
+            android:maxLength="24"
+            android:maxLines="2"
+            app:layout_constraintBottom_toBottomOf="@id/strainImage"
+            app:layout_constraintEnd_toEndOf="@id/strainImage"
+            app:layout_constraintStart_toStartOf="@id/strainImage"
+            app:layout_constraintTop_toTopOf="@id/strainImage" />
+
+        <ImageView
+            android:id="@+id/okButton"
+            android:layout_width="55dp"
+            android:layout_height="55dp"
+            android:layout_marginStart="16dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/strainImage"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/btn_ok" />
+
+        <ImageView
+            android:id="@+id/backButton"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/back_button" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

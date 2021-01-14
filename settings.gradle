@@ -1,0 +1,2 @@
+rootProject.name = "dnaire"
+include ':app'

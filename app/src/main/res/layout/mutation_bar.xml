@@ -1,0 +1,257 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <com.example.dnaire.sections_mutamagotchi.MutationBar
+        android:id="@+id/master"
+        android:layout_width="match_parent"
+        android:layout_height="100dp">
+        <!--mutationTextConst-->
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/mutationTextConst"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/master">
+
+            <ImageView
+                android:id="@+id/mutationsText"
+                android:layout_width="160dp"
+                android:layout_height="40dp"
+                android:src="@drawable/ips_mutations_text"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <!--mutationsConst-->
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/mutationsConst"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/mutationsbg"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/mutationTextConst">
+
+            <ImageView
+                android:id="@+id/mutationWhite"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@drawable/mutationwhite"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/mutationGreen"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/mutationGreen"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@drawable/mutationgreen"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/mutationRed"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/mutationWhite"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/mutationRed"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@drawable/mutationred"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/mutatioBlue"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/mutationGreen"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/mutatioBlue"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@drawable/mutationblue"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/mutationBlack"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/mutationRed"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/mutationBlack"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@drawable/mutationblack"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/mutationGold"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/mutatioBlue"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/mutationGold"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@drawable/mutationgold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/mutationBlack"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+        <!--mutationsConst-->
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/mutationsCounterConst"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/mutationsbg"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/mutationsConst">
+
+        <ImageView
+            android:id="@+id/mutationCounterWhite"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:src="@drawable/minibox"
+            app:layout_constraintEnd_toStartOf="@+id/mutationCounterGreen"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/whiteCounter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/roboto_bold"
+            android:text="0"
+            android:textColor="@color/white"
+            android:textSize="12sp"
+            app:layout_constraintBottom_toBottomOf="@id/mutationCounterWhite"
+            app:layout_constraintEnd_toEndOf="@id/mutationCounterWhite"
+            app:layout_constraintStart_toStartOf="@id/mutationCounterWhite"
+            app:layout_constraintTop_toTopOf="@id/mutationCounterWhite" />
+
+        <ImageView
+            android:id="@+id/mutationCounterGreen"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:src="@drawable/minibox"
+            app:layout_constraintEnd_toStartOf="@+id/mutationCounterRed"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/mutationCounterWhite"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/greenCounter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/roboto_bold"
+            android:text="0"
+            android:textColor="@color/white"
+            android:textSize="12sp"
+            app:layout_constraintBottom_toBottomOf="@id/mutationCounterGreen"
+            app:layout_constraintEnd_toEndOf="@id/mutationCounterGreen"
+            app:layout_constraintStart_toStartOf="@id/mutationCounterGreen"
+            app:layout_constraintTop_toTopOf="@id/mutationCounterGreen" />
+
+        <ImageView
+            android:id="@+id/mutationCounterRed"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:src="@drawable/minibox"
+            app:layout_constraintEnd_toStartOf="@+id/mutatioCounterBlue"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/mutationCounterGreen"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/redCounter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/roboto_bold"
+            android:text="0"
+            android:textColor="@color/white"
+            android:textSize="12sp"
+            app:layout_constraintBottom_toBottomOf="@id/mutationCounterRed"
+            app:layout_constraintEnd_toEndOf="@id/mutationCounterRed"
+            app:layout_constraintStart_toStartOf="@id/mutationCounterRed"
+            app:layout_constraintTop_toTopOf="@id/mutationCounterRed" />
+
+        <ImageView
+            android:id="@+id/mutatioCounterBlue"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:src="@drawable/minibox"
+            app:layout_constraintEnd_toStartOf="@+id/mutationCounterBlack"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/mutationCounterRed"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/blueCounter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/roboto_bold"
+            android:text="0"
+            android:textColor="@color/white"
+            android:textSize="12sp"
+            app:layout_constraintBottom_toBottomOf="@id/mutatioCounterBlue"
+            app:layout_constraintEnd_toEndOf="@id/mutatioCounterBlue"
+            app:layout_constraintStart_toStartOf="@id/mutatioCounterBlue"
+            app:layout_constraintTop_toTopOf="@id/mutatioCounterBlue" />
+
+        <ImageView
+            android:id="@+id/mutationCounterBlack"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:src="@drawable/minibox"
+            app:layout_constraintEnd_toStartOf="@+id/mutationCounterGold"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/mutatioCounterBlue"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/blackCounter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/roboto_bold"
+            android:text="0"
+            android:textColor="@color/white"
+            android:textSize="12sp"
+            app:layout_constraintBottom_toBottomOf="@id/mutationCounterBlack"
+            app:layout_constraintEnd_toEndOf="@id/mutationCounterBlack"
+            app:layout_constraintStart_toStartOf="@id/mutationCounterBlack"
+            app:layout_constraintTop_toTopOf="@id/mutationCounterBlack" />
+
+        <ImageView
+            android:id="@+id/mutationCounterGold"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:src="@drawable/minibox"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/mutationCounterBlack"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/goldCounter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/roboto_bold"
+            android:text="0"
+            android:textColor="@color/white"
+            android:textSize="12sp"
+            app:layout_constraintBottom_toBottomOf="@id/mutationCounterGold"
+            app:layout_constraintEnd_toEndOf="@id/mutationCounterGold"
+            app:layout_constraintStart_toStartOf="@id/mutationCounterGold"
+            app:layout_constraintTop_toTopOf="@id/mutationCounterGold" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </com.example.dnaire.sections_mutamagotchi.MutationBar>
+
+</layout>

@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.drawerlayout.widget.DrawerLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".Main"
+        android:id="@+id/mainDrawer">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/master"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <include layout="@layout/board_dating_switch"
+                android:id="@+id/boredDating"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"/>
+
+            <include
+                android:id="@+id/dnairConst"
+                layout="@layout/dnair_const"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/boredDating" />
+
+            <include
+                android:id="@+id/bestOfFriends"
+                layout="@layout/best_of_friends"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/dnairConst" />
+
+            <include
+                android:id="@+id/seconds"
+                layout="@layout/seconds"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="4dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/bestOfFriends" />
+
+            <include
+                android:id="@+id/strains"
+                layout="@layout/strains"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/seconds" />
+
+            <include
+                android:id="@+id/traits"
+                layout="@layout/traits"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                app:layout_constraintTop_toBottomOf="@id/strains" />
+
+            <include
+                android:id="@+id/bottom"
+                layout="@layout/bottom"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <FrameLayout
+                android:id="@+id/mediaFrame"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_width="0dp"
+                android:layout_height="0dp">
+                <fragment
+                    android:id="@+id/mediaHandler"
+                    class="com.example.dnaire.glide.MediaHandler"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"/>
+            </FrameLayout>
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <include
+            android:id="@+id/profileDrawer"
+            layout="@layout/drawer_profile"
+            android:layout_width="240dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="right" />
+
+        <include
+            android:id="@+id/ipsDrawer"
+            layout="@layout/drawer_ips"
+            android:layout_width="240dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="left" />
+
+
+    </androidx.drawerlayout.widget.DrawerLayout>
+</layout>
